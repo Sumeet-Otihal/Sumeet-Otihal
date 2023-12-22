@@ -1,1 +1,1 @@
-👋 Hi, I’m @Sumeet-Otihal... 👀 I’m interested in Full Stack development and game development... 🌱 I’m currently a student majoring in CSE, I like to collaborate on team/group projects... Reach me @sumeet.blde@gmail.com
+👋 Hi, I’m @Sumeet-Otihal... 👀 I’m interested in Full Stack development and game development... 🌱 I’m currently a student pursueing in CSE, I like to collaborate on team/group projects... Reach me @sumeet.blde@gmail.com
