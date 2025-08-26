@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Scribe – Offline Image Classification Tool</title>
+  <meta name="description" content="Image Scribe is a private, offline-first image classification and dataset organization tool for researchers, hobbyists, and professionals.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%237b2ff7;' /><stop offset='100%' style='stop-color:%23f107a3;' /></linearGradient></defs><text x='50' y='85' font-size='90' font-family='Segoe UI, sans-serif' font-weight='bold' fill='url(%23g)' text-anchor='middle'>S</text></svg>">
+  <link rel="stylesheet" href="image-scribe.css">
+</head>
+<body>
+
+  <div class="background"></div>
+  <div class="particles"></div>
+
+  <header class="about-header">
+    <a href="index.html" class="back-button">&larr; Back to Portfolio</a>
+    <div class="logo">Image Scribe</div>
+  </header>
+
+  <main>
+    <section class="about-section" style="text-align: center;">
+      <h1 class="animated-text" style="font-size: 2.5rem; font-weight: bold; margin-bottom: 1rem;">Image Scribe</h1>
+      <p style="font-size: 1.2rem; max-width: 600px; margin: auto; color: #ccc;">A powerful, private, offline-first image classification tool for dataset preparation.</p>
+      <a href="https://github.com/Sumeet-Otihal/Image-Scribe/releases" class="read-more" style="font-size: 1.1rem; margin-top: 2rem;">Download Installer &rarr;</a>
+    </section>
+
+    <section class="about-section reveal">
+      <h2>✨ Key Features</h2>
+      <div class="skills-grid" style="margin-top: 2rem;">
+        <div class="skill-card"><strong>Offline & Private</strong><br>Runs 100% locally, no internet needed.</div>
+        <div class="skill-card"><strong>Flexible Classification</strong><br>Assign, rename, delete and migrate classes.</div>
+        <div class="skill-card"><strong>Advanced Export</strong><br>Export to folders, CSV, JSON, and ML-ready splits.</div>
+        <div class="skill-card"><strong>Image Editing</strong><br>Crop, rotate, and flip images inside the app.</div>
+        <div class="skill-card"><strong>Performance Optimized</strong><br>Handles tens of thousands of images smoothly.</div>
+        <div class="skill-card"><strong>Modern UI</strong><br>Light & dark mode support with a clean interface.</div>
+      </div>
+    </section>
+
+    <section class="about-section reveal" style="text-align: center;">
+      <h2> Screenshot</h2>
+      <p style="margin-bottom: 2rem;">Here’s a preview of Image Scribe in action.</p>
+      <img src="screenshot.png" alt="App Screenshot" style="max-width: 100%; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+    </section>
+
+    <section class="about-section reveal">
+      <h2>🔒 Privacy First</h2>
+      <div class="about-content">
+        <p>Your images and classification data never leave your computer. Image Scribe works completely offline—no cloud, no tracking, no uploads.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Sumeet Otihal. All rights reserved.</p>
+    <p style="margin-top: 0.5rem;">
+      <a href="https://github.com/Sumeet-Otihal/Image-Scribe" target="_blank" class="animated-text">View on GitHub</a>
+    </p>
+  </footer>
+
+  <script>
+    // Particle generation
+    const particlesContainer = document.querySelector('.particles');
+    for (let i = 0; i < 50; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        particle.style.top = `${Math.random() * 100}%`;
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.animationDuration = `${Math.random() * 15 + 10}s`; // 10s to 25s
+        particle.style.animationDelay = `${Math.random() * 5}s`;
+        particlesContainer.appendChild(particle);
+    }
+
+    // Scroll reveal animation
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => {
+        observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
